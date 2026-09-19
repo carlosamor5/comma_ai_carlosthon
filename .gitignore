@@ -7,6 +7,7 @@ __pycache__/
 # Local/generated runtime data
 outputs/**/*.part
 outputs/**/*.tmp
+scripts/outputs/
 
 # Never commit route/log/video data
 *.rlog
