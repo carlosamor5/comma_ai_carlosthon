@@ -72,4 +72,4 @@ Open this in the Windows browser:
 http://localhost:8000
 ```
 
-The viewer shows the overlay, model metrics, and a local REPORT form. The current REPORT action stores a browser-local record with `localStorage`; server-side incident persistence comes later.
+The viewer shows a synchronized six-frame sequence, model metrics, a legend, a local REPORT form, and saved incidents. REPORT writes a local `outputs/incidents/incident-NNN/` package containing metadata, frame, overlay, and model JSON.

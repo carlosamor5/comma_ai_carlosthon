@@ -14,29 +14,39 @@
     .metric { background: #11161e; border-radius: 8px; padding: 10px; }
     .label { color: #9eacc0; font-size: 12px; }
     .value { font-size: 18px; margin-top: 3px; }
-    button { background: #ed5b5b; border: 0; border-radius: 7px; color: white; cursor: pointer; font-weight: 700; padding: 12px 18px; }
-    textarea { background: #11161e; border: 1px solid #354052; border-radius: 7px; color: white; min-height: 90px; padding: 10px; width: 100%; box-sizing: border-box; }
+    button { background: #3569d4; border: 0; border-radius: 7px; color: white; cursor: pointer; font-weight: 700; padding: 10px 14px; margin: 3px; }
+    button.report { background: #ed5b5b; }
+    textarea, select { background: #11161e; border: 1px solid #354052; border-radius: 7px; color: white; padding: 10px; width: 100%; box-sizing: border-box; }
+    textarea { min-height: 90px; }
     .legend { line-height: 1.8; margin: 12px 0; }
     .swatch { display: inline-block; height: 10px; margin-right: 7px; width: 24px; border-radius: 3px; vertical-align: middle; }
     .cyan { background: #28dcff; } .green { background: #28ff64; } .yellow { background: #ffdc00; } .orange { background: #ff8c00; } .red { background: #ff4646; }
     pre { white-space: pre-wrap; color: #9eacc0; }
+    .incident { border-top: 1px solid #354052; padding: 9px 0; }
+    .muted { color: #9eacc0; }
     @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
   <h1>Carlosthon incident review</h1>
-  <p>Local openpilot model/video artifact · recorded route · diagnostic overlay</p>
+  <p class="muted">Local openpilot model/video artifact · synchronized diagnostic overlay</p>
   <div class="grid">
     <section class="card">
-      <img src="outputs/sample-incident/overlay.jpg" alt="Model overlay on recorded road frame">
-      <h2>Model overlay</h2>
+      <img id="overlay" src="outputs/gallery/frame-0066-model-0066.jpg" alt="Model overlay on recorded road frame">
+      <h2>Sequence review</h2>
+      <div>
+        <button id="previous">← Previous</button>
+        <button id="play">▶ Play</button>
+        <button id="next">Next →</button>
+        <span id="sequence" class="muted"></span>
+      </div>
       <div class="legend">
         <div><span class="swatch cyan"></span><strong>Cyan:</strong> modelV2 predicted path</div>
         <div><span class="swatch green"></span><strong>Green:</strong> lane line 0</div>
         <div><span class="swatch yellow"></span><strong>Yellow:</strong> lane line 1</div>
         <div><span class="swatch orange"></span><strong>Orange:</strong> lane line 2</div>
         <div><span class="swatch red"></span><strong>Red:</strong> road edges / lane line 3</div>
-        <small>Lane probabilities are shown in the Evidence data; line colors identify source arrays, not confidence.</small>
+        <small>Colors identify source arrays, not confidence.</small>
       </div>
     </section>
     <aside class="card">
@@ -48,23 +58,43 @@
         <div class="metric"><div class="label">Acceleration</div><div class="value" id="acceleration">—</div></div>
       </div>
       <h2>Report</h2>
-      <textarea id="note" placeholder="What looked strange?"></textarea>
-      <p><button id="report">REPORT EVENT</button></p>
+      <select id="severity"><option>unknown</option><option>low</option><option>medium</option><option>high</option></select>
+      <p><textarea id="note" placeholder="What looked strange?"></textarea></p>
+      <button class="report" id="report">REPORT EVENT</button>
       <pre id="status"></pre>
+      <h2>Saved incidents</h2>
+      <div id="incidents" class="muted">No incidents yet.</div>
     </aside>
   </div>
   <script>
-    fetch('outputs/sample-incident/model.json').then(r => r.json()).then(m => {
-      frame.textContent = m.frameId;
-      confidence.textContent = m.confidence.replace('<enum>', '');
-      curvature.textContent = Number(m.desiredCurvature).toFixed(5);
-      acceleration.textContent = Number(m.desiredAcceleration).toFixed(3) + ' m/s²';
-    });
-    report.onclick = () => {
-      const report = { createdAt: new Date().toISOString(), label: 'unclassified', severity: 'unknown', note: note.value };
-      status.textContent = 'REPORT captured locally:\n' + JSON.stringify(report, null, 2);
-      localStorage.setItem('carlosthon-report', JSON.stringify(report));
+    const frames = [66, 200, 400, 600, 800, 1000];
+    let index = 0;
+    let timer = null;
+    const $ = id => document.getElementById(id);
+    function updateFrame() {
+      const id = frames[index];
+      $('overlay').src = `outputs/gallery/frame-${String(id).padStart(4, '0')}-model-${String(id).padStart(4, '0')}.jpg`;
+      $('frame').textContent = id;
+      $('sequence').textContent = `frame ${index + 1} / ${frames.length}`;
+      fetch('outputs/sample-incident/model.json').then(r => r.json()).then(m => {
+        $('confidence').textContent = String(m.confidence).replace('<enum>', '');
+        $('curvature').textContent = Number(m.desiredCurvature).toFixed(5);
+        $('acceleration').textContent = Number(m.desiredAcceleration).toFixed(3) + ' m/s²';
+      });
+    }
+    function loadIncidents() {
+      fetch('/api/incidents').then(r => r.json()).then(items => {
+        $('incidents').innerHTML = items.length ? items.map(x => `<div class="incident"><strong>${x.incident}</strong> · frame ${x.frameId}<br><span class="muted">${x.severity} · ${x.note || 'no note'}</span></div>`).join('') : 'No incidents yet.';
+      });
+    }
+    $('previous').onclick = () => { index = (index + frames.length - 1) % frames.length; updateFrame(); };
+    $('next').onclick = () => { index = (index + 1) % frames.length; updateFrame(); };
+    $('play').onclick = () => { if (timer) { clearInterval(timer); timer = null; $('play').textContent = '▶ Play'; } else { timer = setInterval(() => $('next').click(), 1200); $('play').textContent = '⏸ Pause'; } };
+    $('report').onclick = () => {
+      fetch('/api/report', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ frameId: frames[index], severity: $('severity').value, note: $('note').value }) })
+        .then(r => r.json()).then(data => { $('status').textContent = 'REPORT saved:\n' + JSON.stringify(data, null, 2); loadIncidents(); });
     };
+    updateFrame(); loadIncidents();
   </script>
 </body>
 </html>

@@ -8,6 +8,7 @@ __pycache__/
 outputs/**/*.part
 outputs/**/*.tmp
 scripts/outputs/
+outputs/incidents/
 
 # Never commit route/log/video data
 *.rlog
