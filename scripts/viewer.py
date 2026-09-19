@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import cgi
 import json
 import shutil
 from datetime import datetime, timezone
@@ -41,8 +42,15 @@ class Handler(SimpleHTTPRequestHandler):
         if urlparse(self.path).path != "/api/report":
             return json_response(self, {"error": "not found"}, 404)
         try:
-            length = int(self.headers.get("Content-Length", "0"))
-            payload = json.loads(self.rfile.read(length) or b"{}")
+            form = cgi.FieldStorage(
+                fp=self.rfile,
+                headers=self.headers,
+                environ={
+                    "REQUEST_METHOD": "POST",
+                    "CONTENT_TYPE": self.headers.get("Content-Type", ""),
+                    "CONTENT_LENGTH": self.headers.get("Content-Length", "0"),
+                },
+            )
             INCIDENTS.mkdir(parents=True, exist_ok=True)
             existing = [p for p in INCIDENTS.glob("incident-*") if p.is_dir()]
             number = len(existing) + 1
@@ -52,14 +60,28 @@ class Handler(SimpleHTTPRequestHandler):
             for name in ("frame.jpg", "overlay.jpg", "model.json"):
                 if (source / name).exists():
                     shutil.copy2(source / name, destination / name)
+
+            def value(name: str, default: str = "") -> str:
+                return str(form[name].value) if name in form else default
+
+            audio_present = "audio" in form and getattr(form["audio"], "file", None) is not None
+            audio_name = None
+            if audio_present:
+                audio_name = "audio.webm"
+                with (destination / audio_name).open("wb") as audio_file:
+                    shutil.copyfileobj(form["audio"].file, audio_file)
+
             metadata = {
                 "incident": f"incident-{number:03d}",
                 "createdAt": datetime.now(timezone.utc).isoformat(),
-                "route": payload.get("route", "5beb9b58bd12b691|0000010a--a51155e496"),
-                "frameId": payload.get("frameId", 66),
-                "label": payload.get("label", "unclassified"),
-                "severity": payload.get("severity", "unknown"),
-                "note": payload.get("note", ""),
+                "route": value("route", "5beb9b58bd12b691|0000010a--a51155e496"),
+                "frameId": int(value("frameId", "66")),
+                "logMonoTime": int(value("logMonoTime", "0")),
+                "label": value("label", "unclassified"),
+                "severity": value("severity", "unknown"),
+                "note": value("note"),
+                "audio": {"present": audio_present, "filename": audio_name, "format": "audio/webm; codecs=opus" if audio_present else None},
+                "contractVersion": "0.1",
             }
             (destination / "metadata.json").write_text(json.dumps(metadata, indent=2))
             return json_response(self, metadata, 201)

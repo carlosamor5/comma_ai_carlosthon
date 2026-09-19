@@ -72,4 +72,6 @@ Open this in the Windows browser:
 http://localhost:8000
 ```
 
-The viewer shows a synchronized six-frame sequence, model metrics, a legend, a local REPORT form, and saved incidents. REPORT writes a local `outputs/incidents/incident-NNN/` package containing metadata, frame, overlay, and model JSON.
+The viewer shows a synchronized 10-second sequence at 10 FPS, 1-second stepping, model metrics, event markers, a legend, microphone recording, a local REPORT form, and saved incidents. REPORT writes a local `outputs/incidents/incident-NNN/` package containing metadata, frame, overlay, model JSON, and optional `audio.webm`.
+
+The shared report contract is intentionally independent of the trigger. The current browser button is the companion adapter; a future native openpilot UI button can produce the same multipart report fields and package format.

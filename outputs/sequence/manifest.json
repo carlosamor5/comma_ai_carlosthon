@@ -1,0 +1,1876 @@
+{
+  "route": "5beb9b58bd12b691|0000010a--a51155e496",
+  "segment": "000",
+  "anchorModelFrameId": 600,
+  "anchorLogMonoTime": 429565287321268,
+  "windowSeconds": 10,
+  "playbackFps": 10,
+  "inspectionStepSeconds": 1,
+  "camera": {
+    "deviceType": "mici",
+    "sensor": "os04c10",
+    "width": 1344,
+    "height": 760
+  },
+  "frames": [
+    {
+      "index": 0,
+      "image": "frame-0000.jpg",
+      "modelFrameId": 500,
+      "cameraFrameId": 500,
+      "modelLogMonoTime": 429560288531039,
+      "cameraLogMonoTime": 429560256670343,
+      "timeSeconds": -4.998790229,
+      "confidence": "red",
+      "desiredCurvature": 0.00040409486973658204,
+      "desiredAcceleration": 0.9355810880661011,
+      "laneLineProbs": [
+        0.04814625158905983,
+        0.8041203618049622,
+        0.9738833904266357,
+        0.0030063374433666468
+      ]
+    },
+    {
+      "index": 1,
+      "image": "frame-0001.jpg",
+      "modelFrameId": 502,
+      "cameraFrameId": 502,
+      "modelLogMonoTime": 429560389076521,
+      "cameraLogMonoTime": 429560358006783,
+      "timeSeconds": -4.898244747,
+      "confidence": "red",
+      "desiredCurvature": 0.00037170149153098464,
+      "desiredAcceleration": 0.9358309507369995,
+      "laneLineProbs": [
+        0.0735064223408699,
+        0.744978666305542,
+        0.9608110785484314,
+        0.0032098605297505856
+      ]
+    },
+    {
+      "index": 2,
+      "image": "frame-0002.jpg",
+      "modelFrameId": 504,
+      "cameraFrameId": 504,
+      "modelLogMonoTime": 429560489122440,
+      "cameraLogMonoTime": 429560456685830,
+      "timeSeconds": -4.798198828,
+      "confidence": "red",
+      "desiredCurvature": 0.0005512216594070196,
+      "desiredAcceleration": 0.9444060921669006,
+      "laneLineProbs": [
+        0.06008903309702873,
+        0.787591278553009,
+        0.9673901796340942,
+        0.003659218782559037
+      ]
+    },
+    {
+      "index": 3,
+      "image": "frame-0003.jpg",
+      "modelFrameId": 506,
+      "cameraFrameId": 506,
+      "modelLogMonoTime": 429560589436733,
+      "cameraLogMonoTime": 429560557991854,
+      "timeSeconds": -4.697884535,
+      "confidence": "red",
+      "desiredCurvature": 0.0005911606713198125,
+      "desiredAcceleration": 0.9382071495056152,
+      "laneLineProbs": [
+        0.04888302460312843,
+        0.7940088510513306,
+        0.9722619652748108,
+        0.0018173808930441737
+      ]
+    },
+    {
+      "index": 4,
+      "image": "frame-0004.jpg",
+      "modelFrameId": 508,
+      "cameraFrameId": 508,
+      "modelLogMonoTime": 429560688967985,
+      "cameraLogMonoTime": 429560656672880,
+      "timeSeconds": -4.598353283,
+      "confidence": "red",
+      "desiredCurvature": 0.0007233244832605124,
+      "desiredAcceleration": 0.9374199509620667,
+      "laneLineProbs": [
+        0.05818299949169159,
+        0.8131141066551208,
+        0.9686883687973022,
+        0.0023952662013471127
+      ]
+    },
+    {
+      "index": 5,
+      "image": "frame-0005.jpg",
+      "modelFrameId": 510,
+      "cameraFrameId": 510,
+      "modelLogMonoTime": 429560788649440,
+      "cameraLogMonoTime": 429560756675727,
+      "timeSeconds": -4.498671828,
+      "confidence": "red",
+      "desiredCurvature": 0.000774940534029156,
+      "desiredAcceleration": 0.9380375146865845,
+      "laneLineProbs": [
+        0.05821220576763153,
+        0.8636382222175598,
+        0.9698173999786377,
+        0.001570491585880518
+      ]
+    },
+    {
+      "index": 6,
+      "image": "frame-0006.jpg",
+      "modelFrameId": 512,
+      "cameraFrameId": 512,
+      "modelLogMonoTime": 429560888694004,
+      "cameraLogMonoTime": 429560858012948,
+      "timeSeconds": -4.398627264,
+      "confidence": "red",
+      "desiredCurvature": 0.0008079033577814698,
+      "desiredAcceleration": 0.9410919547080994,
+      "laneLineProbs": [
+        0.02277638390660286,
+        0.8690137267112732,
+        0.958996057510376,
+        0.0026643341407179832
+      ]
+    },
+    {
+      "index": 7,
+      "image": "frame-0007.jpg",
+      "modelFrameId": 514,
+      "cameraFrameId": 514,
+      "modelLogMonoTime": 429560988990121,
+      "cameraLogMonoTime": 429560956654653,
+      "timeSeconds": -4.298331147,
+      "confidence": "red",
+      "desiredCurvature": 0.0010220041731372476,
+      "desiredAcceleration": 0.9560849070549011,
+      "laneLineProbs": [
+        0.06924542039632797,
+        0.8414411544799805,
+        0.9594178795814514,
+        0.0022470762487500906
+      ]
+    },
+    {
+      "index": 8,
+      "image": "frame-0008.jpg",
+      "modelFrameId": 516,
+      "cameraFrameId": 516,
+      "modelLogMonoTime": 429561089308268,
+      "cameraLogMonoTime": 429561057989999,
+      "timeSeconds": -4.198013,
+      "confidence": "red",
+      "desiredCurvature": 0.0013020369224250317,
+      "desiredAcceleration": 0.9816355109214783,
+      "laneLineProbs": [
+        0.059576936066150665,
+        0.8609709739685059,
+        0.9768999814987183,
+        0.0012661319924518466
+      ]
+    },
+    {
+      "index": 9,
+      "image": "frame-0009.jpg",
+      "modelFrameId": 518,
+      "cameraFrameId": 518,
+      "modelLogMonoTime": 429561188625362,
+      "cameraLogMonoTime": 429561156670347,
+      "timeSeconds": -4.098695906,
+      "confidence": "red",
+      "desiredCurvature": 0.0015011813957244158,
+      "desiredAcceleration": 0.9719727039337158,
+      "laneLineProbs": [
+        0.045890986919403076,
+        0.8631445169448853,
+        0.9695768356323242,
+        0.002424302976578474
+      ]
+    },
+    {
+      "index": 10,
+      "image": "frame-0010.jpg",
+      "modelFrameId": 520,
+      "cameraFrameId": 520,
+      "modelLogMonoTime": 429561289306255,
+      "cameraLogMonoTime": 429561258059233,
+      "timeSeconds": -3.998015013,
+      "confidence": "red",
+      "desiredCurvature": 0.0014148555928841233,
+      "desiredAcceleration": 0.9811246395111084,
+      "laneLineProbs": [
+        0.09452087432146072,
+        0.8627470135688782,
+        0.9616802334785461,
+        0.0032397122122347355
+      ]
+    },
+    {
+      "index": 11,
+      "image": "frame-0011.jpg",
+      "modelFrameId": 522,
+      "cameraFrameId": 522,
+      "modelLogMonoTime": 429561386944406,
+      "cameraLogMonoTime": 429561356658335,
+      "timeSeconds": -3.900376862,
+      "confidence": "red",
+      "desiredCurvature": 0.0013287567999213934,
+      "desiredAcceleration": 0.9244967699050903,
+      "laneLineProbs": [
+        0.07302428781986237,
+        0.8884305953979492,
+        0.984430730342865,
+        0.0016653601778671145
+      ]
+    },
+    {
+      "index": 12,
+      "image": "frame-0012.jpg",
+      "modelFrameId": 524,
+      "cameraFrameId": 524,
+      "modelLogMonoTime": 429561489056284,
+      "cameraLogMonoTime": 429561458020763,
+      "timeSeconds": -3.798264984,
+      "confidence": "red",
+      "desiredCurvature": 0.0015113160479813814,
+      "desiredAcceleration": 0.8943885564804077,
+      "laneLineProbs": [
+        0.08098474889993668,
+        0.8950420618057251,
+        0.9817963242530823,
+        0.0017551890341565013
+      ]
+    },
+    {
+      "index": 13,
+      "image": "frame-0013.jpg",
+      "modelFrameId": 526,
+      "cameraFrameId": 526,
+      "modelLogMonoTime": 429561589367192,
+      "cameraLogMonoTime": 429561556693560,
+      "timeSeconds": -3.697954076,
+      "confidence": "red",
+      "desiredCurvature": 0.0013925485545769334,
+      "desiredAcceleration": 0.8863434791564941,
+      "laneLineProbs": [
+        0.0881141945719719,
+        0.8847213983535767,
+        0.9885110855102539,
+        0.0011362794321030378
+      ]
+    },
+    {
+      "index": 14,
+      "image": "frame-0014.jpg",
+      "modelFrameId": 528,
+      "cameraFrameId": 528,
+      "modelLogMonoTime": 429561688531010,
+      "cameraLogMonoTime": 429561658023854,
+      "timeSeconds": -3.598790258,
+      "confidence": "red",
+      "desiredCurvature": 0.0011951697524636984,
+      "desiredAcceleration": 0.8737918138504028,
+      "laneLineProbs": [
+        0.10990031808614731,
+        0.9198394417762756,
+        0.9824895858764648,
+        0.0016254197107627988
+      ]
+    },
+    {
+      "index": 15,
+      "image": "frame-0015.jpg",
+      "modelFrameId": 530,
+      "cameraFrameId": 530,
+      "modelLogMonoTime": 429561788899468,
+      "cameraLogMonoTime": 429561756693161,
+      "timeSeconds": -3.4984218,
+      "confidence": "red",
+      "desiredCurvature": 0.0010540175717324018,
+      "desiredAcceleration": 0.838076114654541,
+      "laneLineProbs": [
+        0.09469833970069885,
+        0.9227415919303894,
+        0.9868220090866089,
+        0.0010971056763082743
+      ]
+    },
+    {
+      "index": 16,
+      "image": "frame-0016.jpg",
+      "modelFrameId": 532,
+      "cameraFrameId": 532,
+      "modelLogMonoTime": 429561889090277,
+      "cameraLogMonoTime": 429561858068505,
+      "timeSeconds": -3.398230991,
+      "confidence": "red",
+      "desiredCurvature": 0.0009922614553943276,
+      "desiredAcceleration": 0.817182183265686,
+      "laneLineProbs": [
+        0.10732340067625046,
+        0.9504469633102417,
+        0.993956446647644,
+        0.0007621242548339069
+      ]
+    },
+    {
+      "index": 17,
+      "image": "frame-0017.jpg",
+      "modelFrameId": 534,
+      "cameraFrameId": 534,
+      "modelLogMonoTime": 429561989159267,
+      "cameraLogMonoTime": 429561956665576,
+      "timeSeconds": -3.298162001,
+      "confidence": "red",
+      "desiredCurvature": 0.0010961899533867836,
+      "desiredAcceleration": 0.7977389693260193,
+      "laneLineProbs": [
+        0.12478451430797577,
+        0.9415093064308167,
+        0.9911086559295654,
+        0.001166158472187817
+      ]
+    },
+    {
+      "index": 18,
+      "image": "frame-0018.jpg",
+      "modelFrameId": 536,
+      "cameraFrameId": 536,
+      "modelLogMonoTime": 429562088835409,
+      "cameraLogMonoTime": 429562058004203,
+      "timeSeconds": -3.198485859,
+      "confidence": "red",
+      "desiredCurvature": 0.0010438010795041919,
+      "desiredAcceleration": 0.7770096659660339,
+      "laneLineProbs": [
+        0.11043320596218109,
+        0.9437171220779419,
+        0.9889729619026184,
+        0.001359138754196465
+      ]
+    },
+    {
+      "index": 19,
+      "image": "frame-0019.jpg",
+      "modelFrameId": 538,
+      "cameraFrameId": 538,
+      "modelLogMonoTime": 429562188834246,
+      "cameraLogMonoTime": 429562156676791,
+      "timeSeconds": -3.098487022,
+      "confidence": "red",
+      "desiredCurvature": 0.0009316786890849471,
+      "desiredAcceleration": 0.7527633905410767,
+      "laneLineProbs": [
+        0.11837126314640045,
+        0.936059832572937,
+        0.9876419305801392,
+        0.001774014555849135
+      ]
+    },
+    {
+      "index": 20,
+      "image": "frame-0020.jpg",
+      "modelFrameId": 540,
+      "cameraFrameId": 540,
+      "modelLogMonoTime": 429562287041280,
+      "cameraLogMonoTime": 429562258015366,
+      "timeSeconds": -3.000279988,
+      "confidence": "red",
+      "desiredCurvature": 0.0009370900224894285,
+      "desiredAcceleration": 0.7397664189338684,
+      "laneLineProbs": [
+        0.15159261226654053,
+        0.932258129119873,
+        0.976317286491394,
+        0.0031667135190218687
+      ]
+    },
+    {
+      "index": 21,
+      "image": "frame-0021.jpg",
+      "modelFrameId": 542,
+      "cameraFrameId": 542,
+      "modelLogMonoTime": 429562388729268,
+      "cameraLogMonoTime": 429562356676913,
+      "timeSeconds": -2.898592,
+      "confidence": "red",
+      "desiredCurvature": 0.0008252676343545318,
+      "desiredAcceleration": 0.7103266716003418,
+      "laneLineProbs": [
+        0.1674390435218811,
+        0.9462291598320007,
+        0.9891641736030579,
+        0.0009089693776331842
+      ]
+    },
+    {
+      "index": 22,
+      "image": "frame-0022.jpg",
+      "modelFrameId": 544,
+      "cameraFrameId": 544,
+      "modelLogMonoTime": 429562487100045,
+      "cameraLogMonoTime": 429562458016738,
+      "timeSeconds": -2.800221223,
+      "confidence": "red",
+      "desiredCurvature": 0.0007432857528328896,
+      "desiredAcceleration": 0.679975688457489,
+      "laneLineProbs": [
+        0.12315455079078674,
+        0.9225784540176392,
+        0.9857597947120667,
+        0.0016489664558321238
+      ]
+    },
+    {
+      "index": 23,
+      "image": "frame-0023.jpg",
+      "modelFrameId": 546,
+      "cameraFrameId": 546,
+      "modelLogMonoTime": 429562587060811,
+      "cameraLogMonoTime": 429562556651984,
+      "timeSeconds": -2.700260457,
+      "confidence": "red",
+      "desiredCurvature": 0.0006883929600007832,
+      "desiredAcceleration": 0.6656543016433716,
+      "laneLineProbs": [
+        0.1257806122303009,
+        0.9231439232826233,
+        0.9857951402664185,
+        0.002246821764856577
+      ]
+    },
+    {
+      "index": 24,
+      "image": "frame-0024.jpg",
+      "modelFrameId": 548,
+      "cameraFrameId": 548,
+      "modelLogMonoTime": 429562687192872,
+      "cameraLogMonoTime": 429562658069722,
+      "timeSeconds": -2.600128396,
+      "confidence": "red",
+      "desiredCurvature": 0.0005428766016848385,
+      "desiredAcceleration": 0.6398940682411194,
+      "laneLineProbs": [
+        0.1669781655073166,
+        0.9545185565948486,
+        0.9926042556762695,
+        0.000885342073161155
+      ]
+    },
+    {
+      "index": 25,
+      "image": "frame-0025.jpg",
+      "modelFrameId": 550,
+      "cameraFrameId": 550,
+      "modelLogMonoTime": 429562788656963,
+      "cameraLogMonoTime": 429562756639606,
+      "timeSeconds": -2.498664305,
+      "confidence": "red",
+      "desiredCurvature": 0.0005366738769225776,
+      "desiredAcceleration": 0.6034886837005615,
+      "laneLineProbs": [
+        0.14694051444530487,
+        0.9449511170387268,
+        0.9911676645278931,
+        0.0008157129632309079
+      ]
+    },
+    {
+      "index": 26,
+      "image": "frame-0026.jpg",
+      "modelFrameId": 552,
+      "cameraFrameId": 552,
+      "modelLogMonoTime": 429562887317572,
+      "cameraLogMonoTime": 429562858036564,
+      "timeSeconds": -2.400003696,
+      "confidence": "red",
+      "desiredCurvature": 0.0003732658224180341,
+      "desiredAcceleration": 0.5887374877929688,
+      "laneLineProbs": [
+        0.15736889839172363,
+        0.9425616264343262,
+        0.9887099862098694,
+        0.0017434997716918588
+      ]
+    },
+    {
+      "index": 27,
+      "image": "frame-0027.jpg",
+      "modelFrameId": 554,
+      "cameraFrameId": 554,
+      "modelLogMonoTime": 429562988522715,
+      "cameraLogMonoTime": 429562956644415,
+      "timeSeconds": -2.298798553,
+      "confidence": "red",
+      "desiredCurvature": 0.0005476927617564797,
+      "desiredAcceleration": 0.571449875831604,
+      "laneLineProbs": [
+        0.2164904624223709,
+        0.9480793476104736,
+        0.9885802865028381,
+        0.001589894643984735
+      ]
+    },
+    {
+      "index": 28,
+      "image": "frame-0028.jpg",
+      "modelFrameId": 556,
+      "cameraFrameId": 556,
+      "modelLogMonoTime": 429563088669775,
+      "cameraLogMonoTime": 429563057953876,
+      "timeSeconds": -2.198651493,
+      "confidence": "red",
+      "desiredCurvature": 0.00048806919949129224,
+      "desiredAcceleration": 0.5601006746292114,
+      "laneLineProbs": [
+        0.189007967710495,
+        0.8906485438346863,
+        0.9759044051170349,
+        0.005203635897487402
+      ]
+    },
+    {
+      "index": 29,
+      "image": "frame-0029.jpg",
+      "modelFrameId": 558,
+      "cameraFrameId": 558,
+      "modelLogMonoTime": 429563187162787,
+      "cameraLogMonoTime": 429563156672817,
+      "timeSeconds": -2.100158481,
+      "confidence": "red",
+      "desiredCurvature": 0.0006344977882690728,
+      "desiredAcceleration": 0.5753287672996521,
+      "laneLineProbs": [
+        0.1734408736228943,
+        0.8370920419692993,
+        0.9595476388931274,
+        0.008912545628845692
+      ]
+    },
+    {
+      "index": 30,
+      "image": "frame-0030.jpg",
+      "modelFrameId": 560,
+      "cameraFrameId": 560,
+      "modelLogMonoTime": 429563289096910,
+      "cameraLogMonoTime": 429563258008319,
+      "timeSeconds": -1.998224358,
+      "confidence": "red",
+      "desiredCurvature": 0.0005883724661543965,
+      "desiredAcceleration": 0.5908092856407166,
+      "laneLineProbs": [
+        0.2074381709098816,
+        0.8550311326980591,
+        0.9771518111228943,
+        0.003441441571339965
+      ]
+    },
+    {
+      "index": 31,
+      "image": "frame-0031.jpg",
+      "modelFrameId": 562,
+      "cameraFrameId": 562,
+      "modelLogMonoTime": 429563387387899,
+      "cameraLogMonoTime": 429563356671324,
+      "timeSeconds": -1.899933369,
+      "confidence": "red",
+      "desiredCurvature": 0.0005959084373898804,
+      "desiredAcceleration": 0.5737201571464539,
+      "laneLineProbs": [
+        0.21872569620609283,
+        0.8279775381088257,
+        0.96121746301651,
+        0.005735329352319241
+      ]
+    },
+    {
+      "index": 32,
+      "image": "frame-0032.jpg",
+      "modelFrameId": 564,
+      "cameraFrameId": 564,
+      "modelLogMonoTime": 429563488720172,
+      "cameraLogMonoTime": 429563457946464,
+      "timeSeconds": -1.798601096,
+      "confidence": "red",
+      "desiredCurvature": 0.0005157002015039325,
+      "desiredAcceleration": 0.5408607125282288,
+      "laneLineProbs": [
+        0.16093797981739044,
+        0.841579258441925,
+        0.9856594800949097,
+        0.001536568277515471
+      ]
+    },
+    {
+      "index": 33,
+      "image": "frame-0033.jpg",
+      "modelFrameId": 566,
+      "cameraFrameId": 566,
+      "modelLogMonoTime": 429563589309350,
+      "cameraLogMonoTime": 429563556687539,
+      "timeSeconds": -1.698011918,
+      "confidence": "red",
+      "desiredCurvature": 0.0006905114278197289,
+      "desiredAcceleration": 0.4948495328426361,
+      "laneLineProbs": [
+        0.1737240105867386,
+        0.7872645258903503,
+        0.9713536500930786,
+        0.0022046808153390884
+      ]
+    },
+    {
+      "index": 34,
+      "image": "frame-0034.jpg",
+      "modelFrameId": 568,
+      "cameraFrameId": 568,
+      "modelLogMonoTime": 429563686975989,
+      "cameraLogMonoTime": 429563657992209,
+      "timeSeconds": -1.600345279,
+      "confidence": "red",
+      "desiredCurvature": 0.0007735649705864489,
+      "desiredAcceleration": 0.49446016550064087,
+      "laneLineProbs": [
+        0.17232930660247803,
+        0.7027044296264648,
+        0.9465205073356628,
+        0.004122472368180752
+      ]
+    },
+    {
+      "index": 35,
+      "image": "frame-0035.jpg",
+      "modelFrameId": 570,
+      "cameraFrameId": 570,
+      "modelLogMonoTime": 429563788579553,
+      "cameraLogMonoTime": 429563756658026,
+      "timeSeconds": -1.498741715,
+      "confidence": "red",
+      "desiredCurvature": 0.0007558746146969497,
+      "desiredAcceleration": 0.4894334375858307,
+      "laneLineProbs": [
+        0.18790993094444275,
+        0.7322781682014465,
+        0.9697806239128113,
+        0.0019953667651861906
+      ]
+    },
+    {
+      "index": 36,
+      "image": "frame-0036.jpg",
+      "modelFrameId": 572,
+      "cameraFrameId": 572,
+      "modelLogMonoTime": 429563886941633,
+      "cameraLogMonoTime": 429563856642957,
+      "timeSeconds": -1.400379635,
+      "confidence": "red",
+      "desiredCurvature": 0.0006986871012486517,
+      "desiredAcceleration": 0.4999515414237976,
+      "laneLineProbs": [
+        0.26304587721824646,
+        0.7999125123023987,
+        0.978801429271698,
+        0.004655140917748213
+      ]
+    },
+    {
+      "index": 37,
+      "image": "frame-0037.jpg",
+      "modelFrameId": 574,
+      "cameraFrameId": 574,
+      "modelLogMonoTime": 429563988682535,
+      "cameraLogMonoTime": 429563957986948,
+      "timeSeconds": -1.298638733,
+      "confidence": "red",
+      "desiredCurvature": 0.000732734682969749,
+      "desiredAcceleration": 0.5069124698638916,
+      "laneLineProbs": [
+        0.31206369400024414,
+        0.8061606884002686,
+        0.9746657609939575,
+        0.006407150533050299
+      ]
+    },
+    {
+      "index": 38,
+      "image": "frame-0038.jpg",
+      "modelFrameId": 576,
+      "cameraFrameId": 576,
+      "modelLogMonoTime": 429564088874906,
+      "cameraLogMonoTime": 429564056670890,
+      "timeSeconds": -1.198446362,
+      "confidence": "red",
+      "desiredCurvature": 0.0007991847232915461,
+      "desiredAcceleration": 0.49954989552497864,
+      "laneLineProbs": [
+        0.2884152829647064,
+        0.8035865426063538,
+        0.9543503522872925,
+        0.005490756127983332
+      ]
+    },
+    {
+      "index": 39,
+      "image": "frame-0039.jpg",
+      "modelFrameId": 578,
+      "cameraFrameId": 578,
+      "modelLogMonoTime": 429564188954416,
+      "cameraLogMonoTime": 429564157978737,
+      "timeSeconds": -1.098366852,
+      "confidence": "red",
+      "desiredCurvature": 0.0008955033263191581,
+      "desiredAcceleration": 0.4726583659648895,
+      "laneLineProbs": [
+        0.24044285714626312,
+        0.7525174617767334,
+        0.9457429051399231,
+        0.004374483600258827
+      ]
+    },
+    {
+      "index": 40,
+      "image": "frame-0040.jpg",
+      "modelFrameId": 580,
+      "cameraFrameId": 580,
+      "modelLogMonoTime": 429564288825393,
+      "cameraLogMonoTime": 429564256651689,
+      "timeSeconds": -0.998495875,
+      "confidence": "red",
+      "desiredCurvature": 0.0008000964880920947,
+      "desiredAcceleration": 0.4498773515224457,
+      "laneLineProbs": [
+        0.24367088079452515,
+        0.7178044319152832,
+        0.9562916159629822,
+        0.006073289550840855
+      ]
+    },
+    {
+      "index": 41,
+      "image": "frame-0041.jpg",
+      "modelFrameId": 582,
+      "cameraFrameId": 582,
+      "modelLogMonoTime": 429564387027011,
+      "cameraLogMonoTime": 429564357979223,
+      "timeSeconds": -0.900294257,
+      "confidence": "red",
+      "desiredCurvature": 0.0005274024442769587,
+      "desiredAcceleration": 0.45117348432540894,
+      "laneLineProbs": [
+        0.3227671682834625,
+        0.8603055477142334,
+        0.9821927547454834,
+        0.0021679962519556284
+      ]
+    },
+    {
+      "index": 42,
+      "image": "frame-0042.jpg",
+      "modelFrameId": 584,
+      "cameraFrameId": 584,
+      "modelLogMonoTime": 429564488816921,
+      "cameraLogMonoTime": 429564456653581,
+      "timeSeconds": -0.798504347,
+      "confidence": "red",
+      "desiredCurvature": 0.0006424268358387053,
+      "desiredAcceleration": 0.4612562656402588,
+      "laneLineProbs": [
+        0.31760483980178833,
+        0.7933642864227295,
+        0.9709230065345764,
+        0.003937005531042814
+      ]
+    },
+    {
+      "index": 43,
+      "image": "frame-0043.jpg",
+      "modelFrameId": 586,
+      "cameraFrameId": 586,
+      "modelLogMonoTime": 429564585208560,
+      "cameraLogMonoTime": 429564557961636,
+      "timeSeconds": -0.702112708,
+      "confidence": "red",
+      "desiredCurvature": 0.0006351876072585583,
+      "desiredAcceleration": 0.45744457840919495,
+      "laneLineProbs": [
+        0.3251476287841797,
+        0.8659842014312744,
+        0.9855953454971313,
+        0.003959369380027056
+      ]
+    },
+    {
+      "index": 44,
+      "image": "frame-0044.jpg",
+      "modelFrameId": 588,
+      "cameraFrameId": 588,
+      "modelLogMonoTime": 429564687062582,
+      "cameraLogMonoTime": 429564656660421,
+      "timeSeconds": -0.600258686,
+      "confidence": "red",
+      "desiredCurvature": 0.0007111424347385764,
+      "desiredAcceleration": 0.45578235387802124,
+      "laneLineProbs": [
+        0.3575918972492218,
+        0.810253918170929,
+        0.9713573455810547,
+        0.007502829656004906
+      ]
+    },
+    {
+      "index": 45,
+      "image": "frame-0045.jpg",
+      "modelFrameId": 590,
+      "cameraFrameId": 590,
+      "modelLogMonoTime": 429564787059336,
+      "cameraLogMonoTime": 429564758003943,
+      "timeSeconds": -0.500261932,
+      "confidence": "red",
+      "desiredCurvature": 0.0007015093578957021,
+      "desiredAcceleration": 0.47124388813972473,
+      "laneLineProbs": [
+        0.37378498911857605,
+        0.8170753717422485,
+        0.9561891555786133,
+        0.009524504654109478
+      ]
+    },
+    {
+      "index": 46,
+      "image": "frame-0046.jpg",
+      "modelFrameId": 592,
+      "cameraFrameId": 592,
+      "modelLogMonoTime": 429564888783207,
+      "cameraLogMonoTime": 429564856654449,
+      "timeSeconds": -0.398538061,
+      "confidence": "red",
+      "desiredCurvature": 0.0007994999759830534,
+      "desiredAcceleration": 0.468026340007782,
+      "laneLineProbs": [
+        0.3313244879245758,
+        0.830412745475769,
+        0.9699941277503967,
+        0.0036834387574344873
+      ]
+    },
+    {
+      "index": 47,
+      "image": "frame-0047.jpg",
+      "modelFrameId": 594,
+      "cameraFrameId": 594,
+      "modelLogMonoTime": 429564988556323,
+      "cameraLogMonoTime": 429564957961722,
+      "timeSeconds": -0.298764945,
+      "confidence": "red",
+      "desiredCurvature": 0.000614959339145571,
+      "desiredAcceleration": 0.43653956055641174,
+      "laneLineProbs": [
+        0.27555030584335327,
+        0.8522241711616516,
+        0.9851247072219849,
+        0.0024038178380578756
+      ]
+    },
+    {
+      "index": 48,
+      "image": "frame-0048.jpg",
+      "modelFrameId": 596,
+      "cameraFrameId": 596,
+      "modelLogMonoTime": 429565087004545,
+      "cameraLogMonoTime": 429565056651758,
+      "timeSeconds": -0.200316723,
+      "confidence": "red",
+      "desiredCurvature": 0.0006488660001195967,
+      "desiredAcceleration": 0.4019591808319092,
+      "laneLineProbs": [
+        0.39169254899024963,
+        0.8822144269943237,
+        0.9783650040626526,
+        0.0033937208354473114
+      ]
+    },
+    {
+      "index": 49,
+      "image": "frame-0049.jpg",
+      "modelFrameId": 598,
+      "cameraFrameId": 598,
+      "modelLogMonoTime": 429565187057130,
+      "cameraLogMonoTime": 429565158006685,
+      "timeSeconds": -0.100264138,
+      "confidence": "red",
+      "desiredCurvature": 0.000715819071047008,
+      "desiredAcceleration": 0.3784918189048767,
+      "laneLineProbs": [
+        0.4208998382091522,
+        0.8833131790161133,
+        0.9800235033035278,
+        0.006912160199135542
+      ]
+    },
+    {
+      "index": 50,
+      "image": "frame-0050.jpg",
+      "modelFrameId": 600,
+      "cameraFrameId": 600,
+      "modelLogMonoTime": 429565287321268,
+      "cameraLogMonoTime": 429565256653441,
+      "timeSeconds": 0.0,
+      "confidence": "red",
+      "desiredCurvature": 0.0008150744833983481,
+      "desiredAcceleration": 0.3472555875778198,
+      "laneLineProbs": [
+        0.428913414478302,
+        0.8621440529823303,
+        0.9792445302009583,
+        0.004393153823912144
+      ]
+    },
+    {
+      "index": 51,
+      "image": "frame-0051.jpg",
+      "modelFrameId": 602,
+      "cameraFrameId": 602,
+      "modelLogMonoTime": 429565387088448,
+      "cameraLogMonoTime": 429565357988891,
+      "timeSeconds": 0.09976718,
+      "confidence": "red",
+      "desiredCurvature": 0.0006244538235478103,
+      "desiredAcceleration": 0.3486679792404175,
+      "laneLineProbs": [
+        0.5473846793174744,
+        0.9221948385238647,
+        0.9807522296905518,
+        0.007435196544975042
+      ]
+    },
+    {
+      "index": 52,
+      "image": "frame-0052.jpg",
+      "modelFrameId": 604,
+      "cameraFrameId": 604,
+      "modelLogMonoTime": 429565489161211,
+      "cameraLogMonoTime": 429565456659708,
+      "timeSeconds": 0.201839943,
+      "confidence": "red",
+      "desiredCurvature": 0.0006239770445972681,
+      "desiredAcceleration": 0.3795401155948639,
+      "laneLineProbs": [
+        0.4861035943031311,
+        0.8863710761070251,
+        0.9758156538009644,
+        0.008302859030663967
+      ]
+    },
+    {
+      "index": 53,
+      "image": "frame-0053.jpg",
+      "modelFrameId": 606,
+      "cameraFrameId": 606,
+      "modelLogMonoTime": 429565588728398,
+      "cameraLogMonoTime": 429565557972710,
+      "timeSeconds": 0.30140713,
+      "confidence": "red",
+      "desiredCurvature": 0.0006715856725350022,
+      "desiredAcceleration": 0.3868914544582367,
+      "laneLineProbs": [
+        0.46523356437683105,
+        0.8514228463172913,
+        0.9580554366111755,
+        0.0141826830804348
+      ]
+    },
+    {
+      "index": 54,
+      "image": "frame-0054.jpg",
+      "modelFrameId": 608,
+      "cameraFrameId": 608,
+      "modelLogMonoTime": 429565688948320,
+      "cameraLogMonoTime": 429565656664620,
+      "timeSeconds": 0.401627052,
+      "confidence": "red",
+      "desiredCurvature": 0.000689120264723897,
+      "desiredAcceleration": 0.3740307092666626,
+      "laneLineProbs": [
+        0.4582790732383728,
+        0.8901525735855103,
+        0.9739623069763184,
+        0.011797883547842503
+      ]
+    },
+    {
+      "index": 55,
+      "image": "frame-0055.jpg",
+      "modelFrameId": 610,
+      "cameraFrameId": 610,
+      "modelLogMonoTime": 429565788345774,
+      "cameraLogMonoTime": 429565757963665,
+      "timeSeconds": 0.501024506,
+      "confidence": "red",
+      "desiredCurvature": 0.0006625251844525337,
+      "desiredAcceleration": 0.3387458622455597,
+      "laneLineProbs": [
+        0.4577564299106598,
+        0.8539422750473022,
+        0.9590667486190796,
+        0.010565327480435371
+      ]
+    },
+    {
+      "index": 56,
+      "image": "frame-0056.jpg",
+      "modelFrameId": 612,
+      "cameraFrameId": 612,
+      "modelLogMonoTime": 429565886855817,
+      "cameraLogMonoTime": 429565856646513,
+      "timeSeconds": 0.599534549,
+      "confidence": "red",
+      "desiredCurvature": 0.0006642821244895458,
+      "desiredAcceleration": 0.3058829605579376,
+      "laneLineProbs": [
+        0.6361000537872314,
+        0.9564648270606995,
+        0.9873100519180298,
+        0.006278450135141611
+      ]
+    },
+    {
+      "index": 57,
+      "image": "frame-0057.jpg",
+      "modelFrameId": 614,
+      "cameraFrameId": 614,
+      "modelLogMonoTime": 429565987140735,
+      "cameraLogMonoTime": 429565958004201,
+      "timeSeconds": 0.699819467,
+      "confidence": "red",
+      "desiredCurvature": 0.000603726482950151,
+      "desiredAcceleration": 0.2868437170982361,
+      "laneLineProbs": [
+        0.5971817374229431,
+        0.9336597323417664,
+        0.9814038276672363,
+        0.008913666941225529
+      ]
+    },
+    {
+      "index": 58,
+      "image": "frame-0058.jpg",
+      "modelFrameId": 616,
+      "cameraFrameId": 616,
+      "modelLogMonoTime": 429566086713079,
+      "cameraLogMonoTime": 429566056639603,
+      "timeSeconds": 0.799391811,
+      "confidence": "red",
+      "desiredCurvature": 0.0006684174295514822,
+      "desiredAcceleration": 0.28944340348243713,
+      "laneLineProbs": [
+        0.6441877484321594,
+        0.9568450450897217,
+        0.991038978099823,
+        0.004905289504677057
+      ]
+    },
+    {
+      "index": 59,
+      "image": "frame-0059.jpg",
+      "modelFrameId": 618,
+      "cameraFrameId": 618,
+      "modelLogMonoTime": 429566189352173,
+      "cameraLogMonoTime": 429566157998853,
+      "timeSeconds": 0.902030905,
+      "confidence": "red",
+      "desiredCurvature": 0.0005463464767672122,
+      "desiredAcceleration": 0.302607923746109,
+      "laneLineProbs": [
+        0.6485965847969055,
+        0.9570582509040833,
+        0.9859868884086609,
+        0.01048676110804081
+      ]
+    },
+    {
+      "index": 60,
+      "image": "frame-0060.jpg",
+      "modelFrameId": 620,
+      "cameraFrameId": 620,
+      "modelLogMonoTime": 429566285200864,
+      "cameraLogMonoTime": 429566256676024,
+      "timeSeconds": 0.997879596,
+      "confidence": "red",
+      "desiredCurvature": 0.0005613236571662128,
+      "desiredAcceleration": 0.3085191249847412,
+      "laneLineProbs": [
+        0.594488799571991,
+        0.9545135498046875,
+        0.9869799613952637,
+        0.008763793855905533
+      ]
+    },
+    {
+      "index": 61,
+      "image": "frame-0061.jpg",
+      "modelFrameId": 622,
+      "cameraFrameId": 622,
+      "modelLogMonoTime": 429566386904424,
+      "cameraLogMonoTime": 429566357964183,
+      "timeSeconds": 1.099583156,
+      "confidence": "red",
+      "desiredCurvature": 0.0004890178679488599,
+      "desiredAcceleration": 0.3200863003730774,
+      "laneLineProbs": [
+        0.5519921183586121,
+        0.9270271062850952,
+        0.9809768795967102,
+        0.009577787481248379
+      ]
+    },
+    {
+      "index": 62,
+      "image": "frame-0062.jpg",
+      "modelFrameId": 624,
+      "cameraFrameId": 624,
+      "modelLogMonoTime": 429566486905291,
+      "cameraLogMonoTime": 429566456653021,
+      "timeSeconds": 1.199584023,
+      "confidence": "red",
+      "desiredCurvature": 0.0005032901535741985,
+      "desiredAcceleration": 0.3147695064544678,
+      "laneLineProbs": [
+        0.5851249098777771,
+        0.93693608045578,
+        0.9783065915107727,
+        0.010571994818747044
+      ]
+    },
+    {
+      "index": 63,
+      "image": "frame-0063.jpg",
+      "modelFrameId": 626,
+      "cameraFrameId": 626,
+      "modelLogMonoTime": 429566589060604,
+      "cameraLogMonoTime": 429566557945294,
+      "timeSeconds": 1.301739336,
+      "confidence": "red",
+      "desiredCurvature": 0.0004937607445754111,
+      "desiredAcceleration": 0.3087073862552643,
+      "laneLineProbs": [
+        0.5242123007774353,
+        0.911268949508667,
+        0.9703497886657715,
+        0.013938319869339466
+      ]
+    },
+    {
+      "index": 64,
+      "image": "frame-0064.jpg",
+      "modelFrameId": 628,
+      "cameraFrameId": 628,
+      "modelLogMonoTime": 429566686801562,
+      "cameraLogMonoTime": 429566656660641,
+      "timeSeconds": 1.399480294,
+      "confidence": "red",
+      "desiredCurvature": 0.0005331887514330447,
+      "desiredAcceleration": 0.30379539728164673,
+      "laneLineProbs": [
+        0.5959099531173706,
+        0.9387970566749573,
+        0.9834433794021606,
+        0.008009682409465313
+      ]
+    },
+    {
+      "index": 65,
+      "image": "frame-0065.jpg",
+      "modelFrameId": 630,
+      "cameraFrameId": 630,
+      "modelLogMonoTime": 429566786828002,
+      "cameraLogMonoTime": 429566756637187,
+      "timeSeconds": 1.499506734,
+      "confidence": "red",
+      "desiredCurvature": 0.00038742649485357106,
+      "desiredAcceleration": 0.2926143407821655,
+      "laneLineProbs": [
+        0.6036549806594849,
+        0.9354941844940186,
+        0.9838017821311951,
+        0.005866951309144497
+      ]
+    },
+    {
+      "index": 66,
+      "image": "frame-0066.jpg",
+      "modelFrameId": 632,
+      "cameraFrameId": 632,
+      "modelLogMonoTime": 429566886809495,
+      "cameraLogMonoTime": 429566857976698,
+      "timeSeconds": 1.599488227,
+      "confidence": "red",
+      "desiredCurvature": 0.0003247746208216995,
+      "desiredAcceleration": 0.28976428508758545,
+      "laneLineProbs": [
+        0.6690600514411926,
+        0.952285647392273,
+        0.9854229688644409,
+        0.007545530330389738
+      ]
+    },
+    {
+      "index": 67,
+      "image": "frame-0067.jpg",
+      "modelFrameId": 634,
+      "cameraFrameId": 634,
+      "modelLogMonoTime": 429566989042981,
+      "cameraLogMonoTime": 429566956638922,
+      "timeSeconds": 1.701721713,
+      "confidence": "red",
+      "desiredCurvature": 0.0003027776547241956,
+      "desiredAcceleration": 0.2877705693244934,
+      "laneLineProbs": [
+        0.633724570274353,
+        0.9540899395942688,
+        0.9866430759429932,
+        0.010563877411186695
+      ]
+    },
+    {
+      "index": 68,
+      "image": "frame-0068.jpg",
+      "modelFrameId": 636,
+      "cameraFrameId": 636,
+      "modelLogMonoTime": 429567087236473,
+      "cameraLogMonoTime": 429567057974267,
+      "timeSeconds": 1.799915205,
+      "confidence": "red",
+      "desiredCurvature": 0.00019774421525653452,
+      "desiredAcceleration": 0.2874297797679901,
+      "laneLineProbs": [
+        0.6484605073928833,
+        0.952023983001709,
+        0.9856774806976318,
+        0.012040124274790287
+      ]
+    },
+    {
+      "index": 69,
+      "image": "frame-0069.jpg",
+      "modelFrameId": 638,
+      "cameraFrameId": 638,
+      "modelLogMonoTime": 429567186993601,
+      "cameraLogMonoTime": 429567156664979,
+      "timeSeconds": 1.899672333,
+      "confidence": "red",
+      "desiredCurvature": 0.00014069871394895017,
+      "desiredAcceleration": 0.26789918541908264,
+      "laneLineProbs": [
+        0.6993827819824219,
+        0.9743292927742004,
+        0.9924363493919373,
+        0.009049600921571255
+      ]
+    },
+    {
+      "index": 70,
+      "image": "frame-0070.jpg",
+      "modelFrameId": 640,
+      "cameraFrameId": 640,
+      "modelLogMonoTime": 429567289150735,
+      "cameraLogMonoTime": 429567257980637,
+      "timeSeconds": 2.001829467,
+      "confidence": "red",
+      "desiredCurvature": 5.514848817256279e-05,
+      "desiredAcceleration": 0.24911023676395416,
+      "laneLineProbs": [
+        0.6295868754386902,
+        0.9660041332244873,
+        0.9918233752250671,
+        0.005722750443965197
+      ]
+    },
+    {
+      "index": 71,
+      "image": "frame-0071.jpg",
+      "modelFrameId": 642,
+      "cameraFrameId": 642,
+      "modelLogMonoTime": 429567386850081,
+      "cameraLogMonoTime": 429567356653276,
+      "timeSeconds": 2.099528813,
+      "confidence": "red",
+      "desiredCurvature": -5.16817044626805e-06,
+      "desiredAcceleration": 0.22137081623077393,
+      "laneLineProbs": [
+        0.6650302410125732,
+        0.9699577689170837,
+        0.9904100894927979,
+        0.008807224221527576
+      ]
+    },
+    {
+      "index": 72,
+      "image": "frame-0072.jpg",
+      "modelFrameId": 644,
+      "cameraFrameId": 644,
+      "modelLogMonoTime": 429567489032110,
+      "cameraLogMonoTime": 429567457978726,
+      "timeSeconds": 2.201710842,
+      "confidence": "red",
+      "desiredCurvature": -5.1954397349618375e-05,
+      "desiredAcceleration": 0.17223337292671204,
+      "laneLineProbs": [
+        0.6735631227493286,
+        0.9706826210021973,
+        0.986863374710083,
+        0.013030561618506908
+      ]
+    },
+    {
+      "index": 73,
+      "image": "frame-0073.jpg",
+      "modelFrameId": 646,
+      "cameraFrameId": 646,
+      "modelLogMonoTime": 429567588761426,
+      "cameraLogMonoTime": 429567556648085,
+      "timeSeconds": 2.301440158,
+      "confidence": "red",
+      "desiredCurvature": -8.073315257206559e-05,
+      "desiredAcceleration": 0.14323924481868744,
+      "laneLineProbs": [
+        0.6687396168708801,
+        0.9589630365371704,
+        0.9883177876472473,
+        0.008187751285731792
+      ]
+    },
+    {
+      "index": 74,
+      "image": "frame-0074.jpg",
+      "modelFrameId": 648,
+      "cameraFrameId": 648,
+      "modelLogMonoTime": 429567687237876,
+      "cameraLogMonoTime": 429567657977492,
+      "timeSeconds": 2.399916608,
+      "confidence": "red",
+      "desiredCurvature": -0.00014640018343925476,
+      "desiredAcceleration": 0.0662447065114975,
+      "laneLineProbs": [
+        0.6934815645217896,
+        0.9646787643432617,
+        0.9834594130516052,
+        0.016843043267726898
+      ]
+    },
+    {
+      "index": 75,
+      "image": "frame-0075.jpg",
+      "modelFrameId": 650,
+      "cameraFrameId": 650,
+      "modelLogMonoTime": 429567788904354,
+      "cameraLogMonoTime": 429567756647424,
+      "timeSeconds": 2.501583086,
+      "confidence": "red",
+      "desiredCurvature": -0.00021894657402299345,
+      "desiredAcceleration": 0.04384465143084526,
+      "laneLineProbs": [
+        0.6882341504096985,
+        0.9666078686714172,
+        0.985191285610199,
+        0.01407263521105051
+      ]
+    },
+    {
+      "index": 76,
+      "image": "frame-0076.jpg",
+      "modelFrameId": 652,
+      "cameraFrameId": 652,
+      "modelLogMonoTime": 429567888790173,
+      "cameraLogMonoTime": 429567857954489,
+      "timeSeconds": 2.601468905,
+      "confidence": "red",
+      "desiredCurvature": -0.0002025781141128391,
+      "desiredAcceleration": 0.042185939848423004,
+      "laneLineProbs": [
+        0.6763967871665955,
+        0.9746752977371216,
+        0.9922699928283691,
+        0.007005639374256134
+      ]
+    },
+    {
+      "index": 77,
+      "image": "frame-0077.jpg",
+      "modelFrameId": 654,
+      "cameraFrameId": 654,
+      "modelLogMonoTime": 429567986973979,
+      "cameraLogMonoTime": 429567956636711,
+      "timeSeconds": 2.699652711,
+      "confidence": "red",
+      "desiredCurvature": -0.00014463214029092342,
+      "desiredAcceleration": 0.038786061108112335,
+      "laneLineProbs": [
+        0.725943386554718,
+        0.9790468811988831,
+        0.9926827549934387,
+        0.007317892275750637
+      ]
+    },
+    {
+      "index": 78,
+      "image": "frame-0078.jpg",
+      "modelFrameId": 656,
+      "cameraFrameId": 656,
+      "modelLogMonoTime": 429568088905549,
+      "cameraLogMonoTime": 429568058003305,
+      "timeSeconds": 2.801584281,
+      "confidence": "red",
+      "desiredCurvature": -0.00012194530427223071,
+      "desiredAcceleration": 0.027269592508673668,
+      "laneLineProbs": [
+        0.7791202068328857,
+        0.9881865382194519,
+        0.9950230121612549,
+        0.011203346773982048
+      ]
+    },
+    {
+      "index": 79,
+      "image": "frame-0079.jpg",
+      "modelFrameId": 658,
+      "cameraFrameId": 658,
+      "modelLogMonoTime": 429568189245153,
+      "cameraLogMonoTime": 429568156665111,
+      "timeSeconds": 2.901923885,
+      "confidence": "red",
+      "desiredCurvature": -0.00018058322893921286,
+      "desiredAcceleration": 0.0022868174128234386,
+      "laneLineProbs": [
+        0.7282537221908569,
+        0.9857153296470642,
+        0.9957064986228943,
+        0.005998316686600447
+      ]
+    },
+    {
+      "index": 80,
+      "image": "frame-0080.jpg",
+      "modelFrameId": 660,
+      "cameraFrameId": 660,
+      "modelLogMonoTime": 429568288894316,
+      "cameraLogMonoTime": 429568257975405,
+      "timeSeconds": 3.001573048,
+      "confidence": "red",
+      "desiredCurvature": -0.00013676242087967694,
+      "desiredAcceleration": -0.021140597760677338,
+      "laneLineProbs": [
+        0.7177655100822449,
+        0.9828206300735474,
+        0.9932431578636169,
+        0.010588797740638256
+      ]
+    },
+    {
+      "index": 81,
+      "image": "frame-0081.jpg",
+      "modelFrameId": 662,
+      "cameraFrameId": 662,
+      "modelLogMonoTime": 429568389195171,
+      "cameraLogMonoTime": 429568356654659,
+      "timeSeconds": 3.101873903,
+      "confidence": "red",
+      "desiredCurvature": -0.00012514303671196103,
+      "desiredAcceleration": -0.04154054820537567,
+      "laneLineProbs": [
+        0.7344405651092529,
+        0.981639564037323,
+        0.9913617968559265,
+        0.010922332294285297
+      ]
+    },
+    {
+      "index": 82,
+      "image": "frame-0082.jpg",
+      "modelFrameId": 664,
+      "cameraFrameId": 664,
+      "modelLogMonoTime": 429568488650019,
+      "cameraLogMonoTime": 429568457957609,
+      "timeSeconds": 3.201328751,
+      "confidence": "red",
+      "desiredCurvature": -0.000132671048049815,
+      "desiredAcceleration": -0.04304756596684456,
+      "laneLineProbs": [
+        0.718934178352356,
+        0.978421688079834,
+        0.9935694932937622,
+        0.005696538370102644
+      ]
+    },
+    {
+      "index": 83,
+      "image": "frame-0083.jpg",
+      "modelFrameId": 666,
+      "cameraFrameId": 666,
+      "modelLogMonoTime": 429568587205580,
+      "cameraLogMonoTime": 429568556634103,
+      "timeSeconds": 3.299884312,
+      "confidence": "red",
+      "desiredCurvature": -0.00011102421558462083,
+      "desiredAcceleration": -0.053519874811172485,
+      "laneLineProbs": [
+        0.7261086106300354,
+        0.9800400733947754,
+        0.9939729571342468,
+        0.00464867427945137
+      ]
+    },
+    {
+      "index": 84,
+      "image": "frame-0084.jpg",
+      "modelFrameId": 668,
+      "cameraFrameId": 668,
+      "modelLogMonoTime": 429568689040540,
+      "cameraLogMonoTime": 429568657968823,
+      "timeSeconds": 3.401719272,
+      "confidence": "red",
+      "desiredCurvature": -0.0001537498174002394,
+      "desiredAcceleration": -0.045356057584285736,
+      "laneLineProbs": [
+        0.7367100119590759,
+        0.9777520298957825,
+        0.9923761487007141,
+        0.006386272143572569
+      ]
+    },
+    {
+      "index": 85,
+      "image": "frame-0085.jpg",
+      "modelFrameId": 670,
+      "cameraFrameId": 670,
+      "modelLogMonoTime": 429568788755481,
+      "cameraLogMonoTime": 429568756639223,
+      "timeSeconds": 3.501434213,
+      "confidence": "red",
+      "desiredCurvature": -0.00018491511582396924,
+      "desiredAcceleration": -0.05046790465712547,
+      "laneLineProbs": [
+        0.7569482326507568,
+        0.9801953434944153,
+        0.9938902854919434,
+        0.004976070486009121
+      ]
+    },
+    {
+      "index": 86,
+      "image": "frame-0086.jpg",
+      "modelFrameId": 672,
+      "cameraFrameId": 672,
+      "modelLogMonoTime": 429568887412704,
+      "cameraLogMonoTime": 429568857948527,
+      "timeSeconds": 3.600091436,
+      "confidence": "red",
+      "desiredCurvature": -0.00019836700812447816,
+      "desiredAcceleration": -0.041042398661375046,
+      "laneLineProbs": [
+        0.7272433638572693,
+        0.980966329574585,
+        0.993885338306427,
+        0.006578001193702221
+      ]
+    },
+    {
+      "index": 87,
+      "image": "frame-0087.jpg",
+      "modelFrameId": 674,
+      "cameraFrameId": 674,
+      "modelLogMonoTime": 429568987219100,
+      "cameraLogMonoTime": 429568956655071,
+      "timeSeconds": 3.699897832,
+      "confidence": "red",
+      "desiredCurvature": -0.00022966392862144858,
+      "desiredAcceleration": -0.04323047026991844,
+      "laneLineProbs": [
+        0.7327092885971069,
+        0.9851020574569702,
+        0.9964562058448792,
+        0.003329135710373521
+      ]
+    },
+    {
+      "index": 88,
+      "image": "frame-0088.jpg",
+      "modelFrameId": 676,
+      "cameraFrameId": 676,
+      "modelLogMonoTime": 429569085116615,
+      "cameraLogMonoTime": 429569057956146,
+      "timeSeconds": 3.797795347,
+      "confidence": "red",
+      "desiredCurvature": -0.0014310950646176934,
+      "desiredAcceleration": -0.006438585463911295,
+      "laneLineProbs": [
+        0.757815420627594,
+        0.9863587021827698,
+        0.9960351586341858,
+        0.0038285006303340197
+      ]
+    },
+    {
+      "index": 89,
+      "image": "frame-0089.jpg",
+      "modelFrameId": 678,
+      "cameraFrameId": 678,
+      "modelLogMonoTime": 429569188779366,
+      "cameraLogMonoTime": 429569156633213,
+      "timeSeconds": 3.901458098,
+      "confidence": "red",
+      "desiredCurvature": -0.0015462090959772468,
+      "desiredAcceleration": 0.04966859892010689,
+      "laneLineProbs": [
+        0.7632975578308105,
+        0.9847834706306458,
+        0.9950070381164551,
+        0.004825362470000982
+      ]
+    },
+    {
+      "index": 90,
+      "image": "frame-0090.jpg",
+      "modelFrameId": 680,
+      "cameraFrameId": 680,
+      "modelLogMonoTime": 429569288706121,
+      "cameraLogMonoTime": 429569257964547,
+      "timeSeconds": 4.001384853,
+      "confidence": "red",
+      "desiredCurvature": -0.001799496472813189,
+      "desiredAcceleration": 0.097450390458107,
+      "laneLineProbs": [
+        0.7163674235343933,
+        0.9804564714431763,
+        0.9933454990386963,
+        0.005629207938909531
+      ]
+    },
+    {
+      "index": 91,
+      "image": "frame-0091.jpg",
+      "modelFrameId": 682,
+      "cameraFrameId": 682,
+      "modelLogMonoTime": 429569387324179,
+      "cameraLogMonoTime": 429569356626979,
+      "timeSeconds": 4.100002911,
+      "confidence": "red",
+      "desiredCurvature": -0.0018820278346538544,
+      "desiredAcceleration": 0.11143656820058823,
+      "laneLineProbs": [
+        0.6757237911224365,
+        0.9804458022117615,
+        0.9943575263023376,
+        0.005529946647584438
+      ]
+    },
+    {
+      "index": 92,
+      "image": "frame-0092.jpg",
+      "modelFrameId": 684,
+      "cameraFrameId": 684,
+      "modelLogMonoTime": 429569486866732,
+      "cameraLogMonoTime": 429569457973729,
+      "timeSeconds": 4.199545464,
+      "confidence": "red",
+      "desiredCurvature": -0.002021098043769598,
+      "desiredAcceleration": 0.12767565250396729,
+      "laneLineProbs": [
+        0.6542161703109741,
+        0.9823727011680603,
+        0.9941105246543884,
+        0.01028965599834919
+      ]
+    },
+    {
+      "index": 93,
+      "image": "frame-0093.jpg",
+      "modelFrameId": 686,
+      "cameraFrameId": 686,
+      "modelLogMonoTime": 429569587042540,
+      "cameraLogMonoTime": 429569556644494,
+      "timeSeconds": 4.299721272,
+      "confidence": "red",
+      "desiredCurvature": -0.0019704571459442377,
+      "desiredAcceleration": 0.16744054853916168,
+      "laneLineProbs": [
+        0.6826388239860535,
+        0.9812906384468079,
+        0.9919242262840271,
+        0.008527728728950024
+      ]
+    },
+    {
+      "index": 94,
+      "image": "frame-0094.jpg",
+      "modelFrameId": 688,
+      "cameraFrameId": 688,
+      "modelLogMonoTime": 429569685139577,
+      "cameraLogMonoTime": 429569657953954,
+      "timeSeconds": 4.397818309,
+      "confidence": "red",
+      "desiredCurvature": -0.0020907132420688868,
+      "desiredAcceleration": 0.2293226420879364,
+      "laneLineProbs": [
+        0.6273444890975952,
+        0.9696229100227356,
+        0.9841753840446472,
+        0.0114213265478611
+      ]
+    },
+    {
+      "index": 95,
+      "image": "frame-0095.jpg",
+      "modelFrameId": 690,
+      "cameraFrameId": 690,
+      "modelLogMonoTime": 429569787579357,
+      "cameraLogMonoTime": 429569756646697,
+      "timeSeconds": 4.500258089,
+      "confidence": "red",
+      "desiredCurvature": -0.002241729758679867,
+      "desiredAcceleration": 0.28667378425598145,
+      "laneLineProbs": [
+        0.6024093627929688,
+        0.9293924570083618,
+        0.9607294201850891,
+        0.007063223514705896
+      ]
+    },
+    {
+      "index": 96,
+      "image": "frame-0096.jpg",
+      "modelFrameId": 692,
+      "cameraFrameId": 692,
+      "modelLogMonoTime": 429569887130919,
+      "cameraLogMonoTime": 429569856639491,
+      "timeSeconds": 4.599809651,
+      "confidence": "red",
+      "desiredCurvature": -0.002292176941409707,
+      "desiredAcceleration": 0.34367960691452026,
+      "laneLineProbs": [
+        0.2431936264038086,
+        0.41516655683517456,
+        0.5156078338623047,
+        0.003088328056037426
+      ]
+    },
+    {
+      "index": 97,
+      "image": "frame-0097.jpg",
+      "modelFrameId": 694,
+      "cameraFrameId": 694,
+      "modelLogMonoTime": 429569987348183,
+      "cameraLogMonoTime": 429569957974679,
+      "timeSeconds": 4.700026915,
+      "confidence": "red",
+      "desiredCurvature": -0.0023316361475735903,
+      "desiredAcceleration": 0.38357678055763245,
+      "laneLineProbs": [
+        0.08125733584165573,
+        0.11646223813295364,
+        0.18951347470283508,
+        0.001034022425301373
+      ]
+    },
+    {
+      "index": 98,
+      "image": "frame-0098.jpg",
+      "modelFrameId": 696,
+      "cameraFrameId": 696,
+      "modelLogMonoTime": 429570085200700,
+      "cameraLogMonoTime": 429570056631330,
+      "timeSeconds": 4.797879432,
+      "confidence": "red",
+      "desiredCurvature": -0.002330468501895666,
+      "desiredAcceleration": 0.4101176857948303,
+      "laneLineProbs": [
+        0.03997344896197319,
+        0.05692598596215248,
+        0.07460234314203262,
+        0.00031165138352662325
+      ]
+    },
+    {
+      "index": 99,
+      "image": "frame-0099.jpg",
+      "modelFrameId": 698,
+      "cameraFrameId": 698,
+      "modelLogMonoTime": 429570188775277,
+      "cameraLogMonoTime": 429570157962560,
+      "timeSeconds": 4.901454009,
+      "confidence": "red",
+      "desiredCurvature": -0.0023169040214270353,
+      "desiredAcceleration": 0.43183818459510803,
+      "laneLineProbs": [
+        0.0401625894010067,
+        0.050266191363334656,
+        0.07227122783660889,
+        0.0002700887562241405
+      ]
+    },
+    {
+      "index": 100,
+      "image": "frame-0100.jpg",
+      "modelFrameId": 700,
+      "cameraFrameId": 700,
+      "modelLogMonoTime": 429570286833774,
+      "cameraLogMonoTime": 429570256641657,
+      "timeSeconds": 4.999512506,
+      "confidence": "red",
+      "desiredCurvature": -0.0022728184703737497,
+      "desiredAcceleration": 0.46230068802833557,
+      "laneLineProbs": [
+        0.030715059489011765,
+        0.027443397790193558,
+        0.03490781784057617,
+        0.00013051442510914057
+      ]
+    }
+  ],
+  "eventMarkers": [
+    {
+      "timeSeconds": 3.515709211,
+      "events": [
+        "preLaneChangeLeft"
+      ]
+    },
+    {
+      "timeSeconds": 3.695103078,
+      "events": [
+        "steerOverride",
+        "preLaneChangeLeft"
+      ]
+    },
+    {
+      "timeSeconds": 3.743505711,
+      "events": [
+        "steerOverride",
+        "preLaneChangeLeft"
+      ]
+    },
+    {
+      "timeSeconds": 3.755077224,
+      "events": [
+        "steerOverride",
+        "laneChange"
+      ]
+    },
+    {
+      "timeSeconds": 3.852780944,
+      "events": [
+        "laneChange"
+      ]
+    },
+    {
+      "timeSeconds": 4.744439241,
+      "events": [
+        "laneChange"
+      ]
+    }
+  ]
+}

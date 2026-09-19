@@ -23,6 +23,9 @@
     .cyan { background: #28dcff; } .green { background: #28ff64; } .yellow { background: #ffdc00; } .orange { background: #ff8c00; } .red { background: #ff4646; }
     pre { white-space: pre-wrap; color: #9eacc0; }
     .incident { border-top: 1px solid #354052; padding: 9px 0; }
+    input[type=range] { accent-color: #28dcff; width: 100%; }
+    .timeline { margin: 14px 0; }
+    .event-marker { color: #ff9f43; font-size: 12px; margin-right: 8px; }
     .muted { color: #9eacc0; }
     @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
   </style>
@@ -32,13 +35,19 @@
   <p class="muted">Local openpilot model/video artifact · synchronized diagnostic overlay</p>
   <div class="grid">
     <section class="card">
-      <img id="overlay" src="outputs/gallery/frame-0066-model-0066.jpg" alt="Model overlay on recorded road frame">
-      <h2>Sequence review</h2>
+      <img id="overlay" src="outputs/sequence/frame-0000.jpg" alt="Model overlay on recorded road frame">
+      <h2>10-second sequence review</h2>
       <div>
-        <button id="previous">← Previous</button>
+        <button id="previous">← Frame</button>
+        <button id="stepBack">−1 second</button>
         <button id="play">▶ Play</button>
-        <button id="next">Next →</button>
+        <button id="stepForward">+1 second</button>
+        <button id="next">Frame →</button>
         <span id="sequence" class="muted"></span>
+      </div>
+      <div class="timeline">
+        <input id="scrubber" type="range" min="0" max="100" value="0">
+        <div id="events" class="muted"></div>
       </div>
       <div class="legend">
         <div><span class="swatch cyan"></span><strong>Cyan:</strong> modelV2 predicted path</div>
@@ -60,41 +69,73 @@
       <h2>Report</h2>
       <select id="severity"><option>unknown</option><option>low</option><option>medium</option><option>high</option></select>
       <p><textarea id="note" placeholder="What looked strange?"></textarea></p>
-      <button class="report" id="report">REPORT EVENT</button>
+      <button id="record">🎙 Record audio</button>
+      <span id="recordStatus" class="muted">No audio note recorded.</span>
+      <p><button class="report" id="report">REPORT EVENT</button></p>
       <pre id="status"></pre>
       <h2>Saved incidents</h2>
       <div id="incidents" class="muted">No incidents yet.</div>
     </aside>
   </div>
   <script>
-    const frames = [66, 200, 400, 600, 800, 1000];
+    let manifest = null;
     let index = 0;
     let timer = null;
+    let recorder = null;
+    let audioChunks = [];
     const $ = id => document.getElementById(id);
+    async function loadManifest() {
+      manifest = await fetch('outputs/sequence/manifest.json').then(r => r.json());
+      $('scrubber').max = manifest.frames.length - 1;
+      updateFrame();
+    }
     function updateFrame() {
-      const id = frames[index];
-      $('overlay').src = `outputs/gallery/frame-${String(id).padStart(4, '0')}-model-${String(id).padStart(4, '0')}.jpg`;
-      $('frame').textContent = id;
-      $('sequence').textContent = `frame ${index + 1} / ${frames.length}`;
-      fetch('outputs/sample-incident/model.json').then(r => r.json()).then(m => {
-        $('confidence').textContent = String(m.confidence).replace('<enum>', '');
-        $('curvature').textContent = Number(m.desiredCurvature).toFixed(5);
-        $('acceleration').textContent = Number(m.desiredAcceleration).toFixed(3) + ' m/s²';
-      });
+      if (!manifest) return;
+      const current = manifest.frames[index];
+      $('overlay').src = `outputs/sequence/${current.image}`;
+      $('frame').textContent = `${current.cameraFrameId} / model ${current.modelFrameId}`;
+      $('sequence').textContent = `${current.timeSeconds.toFixed(2)}s · frame ${index + 1} / ${manifest.frames.length}`;
+      $('scrubber').value = index;
+      $('confidence').textContent = String(current.confidence).replace('<enum>', '');
+      $('curvature').textContent = Number(current.desiredCurvature).toFixed(5);
+      $('acceleration').textContent = Number(current.desiredAcceleration).toFixed(3) + ' m/s²';
+      $('events').innerHTML = manifest.eventMarkers.filter(e => Math.abs(e.timeSeconds - current.timeSeconds) < 0.25).map(e => `<span class="event-marker">EVENT ${e.events.join(', ')}</span>`).join('');
     }
     function loadIncidents() {
       fetch('/api/incidents').then(r => r.json()).then(items => {
-        $('incidents').innerHTML = items.length ? items.map(x => `<div class="incident"><strong>${x.incident}</strong> · frame ${x.frameId}<br><span class="muted">${x.severity} · ${x.note || 'no note'}</span></div>`).join('') : 'No incidents yet.';
+        $('incidents').innerHTML = items.length ? items.map(x => `<div class="incident"><strong>${x.incident}</strong> · frame ${x.frameId}<br><span class="muted">${x.severity} · ${x.note || 'no note'} · audio: ${x.audio?.present ? 'yes' : 'no'}</span></div>`).join('') : 'No incidents yet.';
       });
     }
-    $('previous').onclick = () => { index = (index + frames.length - 1) % frames.length; updateFrame(); };
-    $('next').onclick = () => { index = (index + 1) % frames.length; updateFrame(); };
-    $('play').onclick = () => { if (timer) { clearInterval(timer); timer = null; $('play').textContent = '▶ Play'; } else { timer = setInterval(() => $('next').click(), 1200); $('play').textContent = '⏸ Pause'; } };
-    $('report').onclick = () => {
-      fetch('/api/report', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ frameId: frames[index], severity: $('severity').value, note: $('note').value }) })
-        .then(r => r.json()).then(data => { $('status').textContent = 'REPORT saved:\n' + JSON.stringify(data, null, 2); loadIncidents(); });
+    function move(delta) { index = Math.max(0, Math.min(manifest.frames.length - 1, index + delta)); updateFrame(); }
+    $('previous').onclick = () => move(-1);
+    $('next').onclick = () => move(1);
+    $('stepBack').onclick = () => move(-10);
+    $('stepForward').onclick = () => move(10);
+    $('scrubber').oninput = () => { index = Number($('scrubber').value); updateFrame(); };
+    $('play').onclick = () => { if (timer) { clearInterval(timer); timer = null; $('play').textContent = '▶ Play'; } else { timer = setInterval(() => { if (index >= manifest.frames.length - 1) { clearInterval(timer); timer = null; $('play').textContent = '▶ Play'; } else move(1); }, 100); $('play').textContent = '⏸ Pause'; } };
+    $('report').onclick = async () => {
+      const form = new FormData();
+      const current = manifest.frames[index];
+      form.append('frameId', current.cameraFrameId);
+      form.append('logMonoTime', current.modelLogMonoTime);
+      form.append('severity', $('severity').value);
+      form.append('note', $('note').value);
+      if (recorder && audioChunks.length) form.append('audio', new Blob(audioChunks, {type: 'audio/webm; codecs=opus'}), 'report.webm');
+      const data = await fetch('/api/report', {method: 'POST', body: form}).then(r => r.json());
+      $('status').textContent = 'REPORT saved:\n' + JSON.stringify(data, null, 2);
+      loadIncidents();
     };
-    updateFrame(); loadIncidents();
+    $('record').onclick = async () => {
+      if (!recorder) {
+        const stream = await navigator.mediaDevices.getUserMedia({audio: true});
+        recorder = new MediaRecorder(stream);
+        audioChunks = [];
+        recorder.ondataavailable = e => { if (e.data.size) audioChunks.push(e.data); };
+        recorder.onstop = () => { $('record').textContent = '🎙 Record audio'; $('recordStatus').textContent = 'Audio note ready to attach to REPORT.'; };
+        recorder.start(); $('record').textContent = '⏹ Stop recording'; $('recordStatus').textContent = 'Recording microphone note...';
+      } else { recorder.stop(); recorder.stream.getTracks().forEach(t => t.stop()); recorder = null; }
+    };
+    loadManifest(); loadIncidents();
   </script>
 </body>
 </html>
