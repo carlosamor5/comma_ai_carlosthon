@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Local/generated runtime data
+outputs/**/*.part
+outputs/**/*.tmp
+
+# Never commit route/log/video data
+*.rlog
+*.rlog.zst
+*.qlog
+*.qlog.zst
+*.hevc
+*.ts
+
+# Local credentials and environment files
+.env
+.env.*
+*.token
+auth.json
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

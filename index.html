@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Carlosthon incident review</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #101318; color: #edf2f7; }
+    body { max-width: 1200px; margin: 0 auto; padding: 28px; }
+    .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+    .card { background: #1b212b; border: 1px solid #354052; border-radius: 12px; padding: 18px; }
+    img { width: 100%; border-radius: 8px; background: #050608; }
+    .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .metric { background: #11161e; border-radius: 8px; padding: 10px; }
+    .label { color: #9eacc0; font-size: 12px; }
+    .value { font-size: 18px; margin-top: 3px; }
+    button { background: #ed5b5b; border: 0; border-radius: 7px; color: white; cursor: pointer; font-weight: 700; padding: 12px 18px; }
+    textarea { background: #11161e; border: 1px solid #354052; border-radius: 7px; color: white; min-height: 90px; padding: 10px; width: 100%; box-sizing: border-box; }
+    .legend { line-height: 1.8; margin: 12px 0; }
+    .swatch { display: inline-block; height: 10px; margin-right: 7px; width: 24px; border-radius: 3px; vertical-align: middle; }
+    .cyan { background: #28dcff; } .green { background: #28ff64; } .yellow { background: #ffdc00; } .orange { background: #ff8c00; } .red { background: #ff4646; }
+    pre { white-space: pre-wrap; color: #9eacc0; }
+    @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <h1>Carlosthon incident review</h1>
+  <p>Local openpilot model/video artifact · recorded route · diagnostic overlay</p>
+  <div class="grid">
+    <section class="card">
+      <img src="outputs/sample-incident/overlay.jpg" alt="Model overlay on recorded road frame">
+      <h2>Model overlay</h2>
+      <div class="legend">
+        <div><span class="swatch cyan"></span><strong>Cyan:</strong> modelV2 predicted path</div>
+        <div><span class="swatch green"></span><strong>Green:</strong> lane line 0</div>
+        <div><span class="swatch yellow"></span><strong>Yellow:</strong> lane line 1</div>
+        <div><span class="swatch orange"></span><strong>Orange:</strong> lane line 2</div>
+        <div><span class="swatch red"></span><strong>Red:</strong> road edges / lane line 3</div>
+        <small>Lane probabilities are shown in the Evidence data; line colors identify source arrays, not confidence.</small>
+      </div>
+    </section>
+    <aside class="card">
+      <h2>Evidence</h2>
+      <div class="metrics">
+        <div class="metric"><div class="label">Matched frame</div><div class="value" id="frame">—</div></div>
+        <div class="metric"><div class="label">Confidence</div><div class="value" id="confidence">—</div></div>
+        <div class="metric"><div class="label">Curvature</div><div class="value" id="curvature">—</div></div>
+        <div class="metric"><div class="label">Acceleration</div><div class="value" id="acceleration">—</div></div>
+      </div>
+      <h2>Report</h2>
+      <textarea id="note" placeholder="What looked strange?"></textarea>
+      <p><button id="report">REPORT EVENT</button></p>
+      <pre id="status"></pre>
+    </aside>
+  </div>
+  <script>
+    fetch('outputs/sample-incident/model.json').then(r => r.json()).then(m => {
+      frame.textContent = m.frameId;
+      confidence.textContent = m.confidence.replace('<enum>', '');
+      curvature.textContent = Number(m.desiredCurvature).toFixed(5);
+      acceleration.textContent = Number(m.desiredAcceleration).toFixed(3) + ' m/s²';
+    });
+    report.onclick = () => {
+      const report = { createdAt: new Date().toISOString(), label: 'unclassified', severity: 'unknown', note: note.value };
+      status.textContent = 'REPORT captured locally:\n' + JSON.stringify(report, null, 2);
+      localStorage.setItem('carlosthon-report', JSON.stringify(report));
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "route": "5beb9b58bd12b691|0000010a--a51155e496",
+  "segment": "000",
+  "source_rlog": "/mnt/d/comma_ai/offline_data/tool_routes/5beb9b58bd12b691|0000010a--a51155e496/000/rlog.zst",
+  "source_camera": "/mnt/d/comma_ai/offline_data/tool_routes/5beb9b58bd12b691|0000010a--a51155e496/000/fcamera.hevc",
+  "anchor_logMonoTime": 429538742055232,
+  "anchor_frameId": 66,
+  "model_frameId": 66,
+  "camera_frameId": 66,
+  "encode_frameId": 66,
+  "model_camera_time_delta_ns": -185375249,
+  "camera_width": 1344,
+  "camera_height": 760,
+  "camera_frame_count": 1200,
+  "label": "unclassified",
+  "severity": "unknown",
+  "note": "First Carlosthon extraction artifact",
+  "camera_device_type": "mici",
+  "camera_sensor": "os04c10",
+  "rpyCalib": [
+    -0.00040542264468967915,
+    0.164722740650177,
+    0.004513291642069817
+  ],
+  "overlay_note": "Uses openpilot camera intrinsics and calibrated rpyCalib transform."
+}
